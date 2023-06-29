@@ -1,0 +1,1 @@
+export const SERVER_URI = "http://localhost:8090/app-ael-food/"

@@ -1,0 +1,35 @@
+<div class="card col-offset-2" style="width: 70%;">
+    <p-table #dt [value]="produtos" [rows]="10" [paginator]="true" [globalFilterFields]="['id','frota','placa']" [tableStyle]="{'min-width': '40rem'}"
+         [rows]="5" [showCurrentPageReport]="true"  [rowsPerPageOptions]="[5,10,20,30,50]"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [showCurrentPageReport]="true">
+    
+        <ng-template pTemplate="header">
+            <tr>
+               
+                <th  style="min-width:120px">Nome</th>
+                <th  style="min-width:10rem">Descrição</th>
+                <th  style="min-width:10rem">Valor</th>
+                <th  style="min-width:10rem">Categoria</th>
+                <th style="text-align: center;">Ações</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-produtos>
+            <tr>
+               
+                <td>{{produtos.nome}}</td>
+                <td>{{produtos.descricao}}</td>
+                <td>{{produtos.preco}}</td>
+                <td>{{produtos.categoria.nome}}</td>
+                <td style="text-align: center;">
+                    <button  pButton pRipple class="p-button-raised p-button-text p-button-secondary mr-2" ><img style="width: 20px;" src="../../../assets/icones_png/editar.png"></button>
+                    <button  pButton pRipple class="p-button-raised p-button-text p-button-warning" ><img style="width: 20px;" src="../../../assets/icones_png/excluir.png"></button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="flex align-items-center justify-content-between">
+                <!-- In total there are {{chamados ? chamados.length : 0 }} products. -->
+            </div>
+        </ng-template>
+    </p-table>
+</div>

@@ -1,0 +1,52 @@
+<div style="width: 80%;float: right;margin-right: 35px;">
+    <div class="card">
+        <form [formGroup]="clienteForm" (ngSubmit)="cadastrar()">
+            <div class="p-fluid p-formgrid grid">
+                <div class="field col-12 md:col-8">
+                    <label htmlFor="firstname2">Nome</label>
+                    <input formControlName="nome" pInputText id="firstname2" type="text" />
+                </div>
+                <div class="field col-12 md:col-4">
+                    <label htmlFor="lastname2">Numero telefone</label>
+                    <input formControlName="contato" pInputText id="lastname2" type="text" />
+                </div>
+                <div class="col-12 md:col-12 flex justify-content-center">
+                    <h3>Endereço</h3>
+                </div>
+        
+                <div class="field col-12 md:col-9">
+                    <label htmlFor="city">Logradouro</label>
+                    <input formControlName="logradouro" pInputText id="city" type="text" />
+                </div>
+        
+                <div class="field col-12 md:col-3">
+                    <label htmlFor="city">Numero</label>
+                    <input formControlName="numero" pInputText id="city" type="text" />
+                </div>
+                
+                <div class="field col-12 md:col-4">
+                    <label htmlFor="city">Bairro</label>
+                    <input formControlName="bairro" pInputText id="city" type="text" />
+                </div>
+        
+                <div class="field col-12 md:col-2">
+                    <label htmlFor="city">CEP</label>
+                    <input formControlName="cep" pInputText id="city" type="text" />
+                </div>
+                <div class="field col-12 md:col-4">
+                    <label htmlFor="city">Cidade</label>
+                    <input formControlName="cidade" pInputText id="city" type="text" />
+                </div>
+                <div class="field col-12 md:col-2">
+                    <label htmlFor="city">UF</label>
+                    <input formControlName="estado" pInputText id="city" type="text" />
+                </div>
+            </div>
+            <div class="p-fluid p-formgrid grid">
+           
+                <p-button type="submit" label="Salvar" styleClass="p-button-raised p-button-text p-button-secondary"></p-button>
+                <p-button [style]="{'margin-left':'10px'}" label="Cancelar" styleClass="p-button-raised p-button-text p-button-danger"></p-button>
+            </div>
+        </form>
+    </div>
+</div>

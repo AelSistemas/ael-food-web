@@ -1,0 +1,40 @@
+<div style="width: 80%;float: right;margin-right: 35px;">
+    <div class="card">
+        <form [formGroup]="produtoForm" (ngSubmit)="cadastrar()">
+            <div class="p-fluid p-formgrid grid">
+                <div class="field col-12 md:col-4">
+                    <label htmlFor="firstname2">Nome</label>
+                    <input formControlName="nome" pInputText id="firstname2" type="text" />
+                </div>
+                <div class="field col-12 md:col-4">
+                    <label htmlFor="lastname2">Descrição</label>
+                    <input formControlName="descricao" pInputText id="lastname2" type="text" />
+                </div>
+                <div class="field col-12 md:col-4">
+                    <label htmlFor="lastname2">Categoria</label>
+                    <p-dropdown [options]="categorias" formControlName="idCategoria" [(ngModel)]="categoriaSelecionada" optionLabel="nome" optionValue="idCategoria"></p-dropdown>
+                </div>
+
+                <div class="field col-12 md:col-4">
+                    <label htmlFor="city">Imagem</label>
+                    <input formControlName="imagem" pInputText id="city" type="text" />
+                </div>
+        
+                <div class="field col-12 md:col-4">
+                    <label htmlFor="city">Preço</label>
+                    <input formControlName="preco" pInputText id="city" type="text" />
+                </div>
+                
+                <div class="field col-12 md:col-4">
+                    <label htmlFor="city">Quantidade</label>
+                    <input formControlName="quantidade" pInputText id="city" type="text" />
+                </div>
+            </div>
+            <div class="p-fluid p-formgrid grid">
+           
+                <p-button type="submit" label="Salvar" styleClass="p-button-raised p-button-text p-button-secondary"></p-button>
+                <p-button [style]="{'margin-left':'10px'}" label="Cancelar" styleClass="p-button-raised p-button-text p-button-danger"></p-button>
+            </div>
+        </form>
+    </div>
+</div>
